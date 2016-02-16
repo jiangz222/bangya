@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <EditText
+            android:id="@+id/suggest_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+			  android:textSize="17sp"
+			  android:scrollbars="vertical"
+			  android:maxLines="15"
+			  android:maxLength="240" 
+            android:hint="请输入您的建议，不多于240字，谢谢"
+	>
+       </EditText>
+
+</LinearLayout>

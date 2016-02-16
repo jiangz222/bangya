@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray">
+
+	<ListView 
+    	android:id="@+id/chat_lv" 
+    	android:scrollbars="vertical" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="0dp" 
+        android:listSelector="@android:color/transparent"
+    	android:transcriptMode="alwaysScroll" 
+    	android:cacheColorHint="#00000000" 
+    	android:divider="@null"
+    	android:layout_weight="1" />
+	
+	    <LinearLayout 
+    	android:orientation="horizontal" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="3dp">
+    	         <!-- this linearlayout is avoid edittext get focus when into register -->
+		<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_width="0px"
+		android:layout_height="0px">
+        <requestFocus />
+        </LinearLayout>
+    	 <EditText 
+    	android:id="@+id/chat_input"
+    	android:layout_width="0dip"
+    	android:layout_height="wrap_content"
+		android:hint="@string/comments_hint"
+       android:maxLines="8" 
+       android:maxLength="200" 
+       android:textSize="15sp"
+       android:layout_weight="1"       
+        />
+		<Button 
+    	android:id="@+id/chat_send"
+    	android:layout_width="45dp"
+    	android:layout_height="45dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="12dp"
+    	
+    	android:background="@drawable/send"
+    	   />
+
+    </LinearLayout>
+
+</LinearLayout>

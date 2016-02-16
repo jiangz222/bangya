@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginBottom="10dp"
+     
+    >
+    <!--  head image    -->
+	<ImageView
+    android:id="@+id/job_list_headimage"
+	android:layout_width="60dp"
+	android:layout_height="60dp"
+	android:src="@drawable/default_head"
+	android:layout_margin="7dp"
+	></ImageView>
+	<!--  name & gender	 -->
+	<LinearLayout	
+	 android:id="@+id/job_list_name_gender_distance"
+	 android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical"
+	android:layout_toRightOf="@id/job_list_headimage"
+	android:layout_alignTop="@id/job_list_headimage"
+		>
+	<TextView
+	android:id="@+id/job_list_publisher_name"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/login_label_username"
+	android:textColor="@color/black"
+	android:textSize="15sp"
+	></TextView>	
+	<ImageView
+    android:id="@+id/job_list_gender"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	></ImageView>
+	
+	<View  
+	 android:id="@+id/job_list_vertical_seperate"
+	    
+    android:layout_width="1dip" 
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:layout_gravity="center_horizontal"
+    	android:layout_marginLeft="3dp"
+    
+    />
+	<ImageView
+    android:id="@+id/job_list_refresh"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+		android:layout_marginLeft="6dp"
+	
+	></ImageView>
+	<ImageView
+    android:id="@+id/job_list_msg_notify"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+		android:layout_marginLeft="3dp"
+	
+	></ImageView>
+	<TextView
+	android:id="@+id/job_list_spaces1"
+	android:layout_width="0dp"
+	android:layout_height="wrap_content"
+	android:visibility="invisible"  
+	android:layout_weight="1"
+	android:gravity="center"
+	></TextView>	
+	<TextView
+	android:id="@+id/job_list_distance"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/distance"
+	android:textColor="@color/gray_light"
+	android:layout_marginRight="5dp"
+	android:textSize="15sp"
+	></TextView>
+	</LinearLayout>
+
+	<LinearLayout	
+    android:id="@+id/job_list_status_duetime"
+	 android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+	android:layout_toRightOf="@id/job_list_headimage"
+	android:layout_below="@id/job_list_name_gender_distance"
+	android:layout_alignLeft="@id/job_list_name_gender_distance"
+    android:gravity="center_vertical"
+    android:layout_marginTop="5dp"
+	>
+	<TextView
+	android:id="@+id/job_list_status"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"  
+	android:text="@string/bangbang_status"
+	android:textColor="@color/gray"
+	android:textSize="15sp"
+	android:layout_weight="1"
+	>
+	</TextView>
+  <TextView
+	android:id="@+id/job_list_spaces"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:visibility="invisible"  
+	android:layout_weight="1"
+	></TextView>
+	<TextView
+	android:id="@+id/job_list_deadtimename"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/deadtime"
+	android:textColor="@color/gray"
+	android:textSize="15sp"
+	>	</TextView>
+	<TextView
+	android:id="@+id/job_list_deadtime"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"  
+	android:text="@string/deadtime"
+	android:textColor="@color/gray"
+	android:textSize="15sp"
+    	android:layout_marginRight="5dp"
+    
+	
+	>	</TextView>
+	</LinearLayout>
+	
+		<LinearLayout	
+	 android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+	android:layout_toRightOf="@id/job_list_headimage"
+	android:layout_below="@id/job_list_status_duetime"
+	android:layout_alignLeft="@id/job_list_name_gender_distance"
+    android:layout_marginTop="5dp"
+	>
+	<TextView
+	android:id="@+id/job_list_title"    
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/hello_world"
+	android:textColor="@color/gray_dark"
+	android:textSize="15sp"
+	>
+	</TextView>
+	
+	<!-- just for space save -->
+	<TextView
+	    android:id="@+id/job_list_space"
+	    android:layout_width="wrap_content"
+	    android:layout_height="5dp"
+	    android:visibility="invisible" >
+	</TextView>
+	</LinearLayout>
+	
+</RelativeLayout>

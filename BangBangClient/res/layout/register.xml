@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" 
+    >
+
+
+	<!-- imagehead   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/reg_head"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:onClick="selectHeadImage"
+            android:src="@drawable/default_head" />
+
+    </LinearLayout>-->  
+
+    <!-- name,email,pwd,repwd -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		 android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="80dp"
+		
+        android:orientation="vertical" 
+        >
+        <!-- this linearlayout is avoid edittext get focus when into register -->
+		<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_width="0px"
+		android:layout_height="0px">
+        <requestFocus />
+    
+    	</LinearLayout>
+              <RadioGroup
+                android:id="@+id/reg_radioGroup"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="10dp"
+                android:orientation="horizontal" 
+                android:gravity="center"
+                >
+
+                <RadioButton
+                    android:id="@+id/reg_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/male" 
+                    android:onClick="setMale"/>
+
+                <RadioButton
+                    android:id="@+id/reg_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black"
+                    android:checked="true"
+                    android:text="@string/female"
+                    android:onClick="setFelmale" />
+            </RadioGroup>
+        <EditText
+            android:id="@+id/reg_nickname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/login_label_nickname"
+            android:inputType="text"
+            android:singleLine="true" />
+        <EditText
+            android:id="@+id/reg_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_label_email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+        <EditText
+            android:id="@+id/reg_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_label_password"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/reg_re_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_label_onemore_pw"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+
+    </LinearLayout>
+    
+    <!-- register button -->
+    <Button
+        android:id="@+id/register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/register" 
+        android:onClick="BangBangSendReg"/>
+
+</LinearLayout >

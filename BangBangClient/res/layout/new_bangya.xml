@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+    
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+    <!-- new bb  -->
+    <RelativeLayout
+        android:id="@+id/newbb_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <!-- new bb title -->
+    <RelativeLayout
+        android:id="@+id/newbb_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        
+        android:background="@color/background_gray">
+        <ImageView
+            android:id="@+id/newbb_title_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title"
+            android:layout_marginTop="3dp"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/newbb_titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bangbang_title"
+            android:textColor="@color/black"
+            android:textSize="15sp" 
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/newbb_title_image"
+            >
+
+        </TextView>
+
+         <!-- this linearlayout is avoid edittext get focus when into register -->
+		<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_width="0px"
+		android:layout_height="0px">
+        <requestFocus />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/newbb_title_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newbb_titlename"
+			  android:textSize="15sp"
+            android:hint="@string/thisistitle"
+           android:maxLength="20" 
+            android:layout_marginTop="3dp">
+        </EditText>
+        </RelativeLayout>
+    	<View  
+    	android:id="@+id/divider_1"
+   		android:layout_width="fill_parent"  
+    	android:layout_height="1dp" 
+    	android:layout_below="@id/newbb_title_layout"
+    	android:layout_marginTop="6dp"
+   		android:background="?android:attr/listDivider"  
+			/>  
+         <!-- new bb detail -->
+        <RelativeLayout
+        android:id="@+id/newbb_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray"
+        android:layout_below="@id/divider_1"
+		  android:layout_alignLeft="@id/newbb_title_layout"	        
+        
+        android:layout_marginTop="6dp">
+        <ImageView
+            android:id="@+id/newbb_detail_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/detail"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/newbb_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bangbang_detail"
+            android:textColor="@color/black"
+            android:textSize="15sp" 
+            android:layout_marginLeft="5dp"
+			android:layout_toRightOf="@id/newbb_detail_image"
+            >
+        </TextView>
+        <EditText
+          android:id="@+id/newbb_detail_input"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/newbb_detail"
+          android:hint="@string/thisisdetail"
+			android:minLines="3"
+			android:textSize="15sp"
+			android:gravity="top"
+			android:layout_marginTop="3dp"
+			android:maxLength="150" 
+			></EditText>
+        </RelativeLayout>
+       <View  
+    	android:id="@+id/divider_2"
+   		android:layout_width="fill_parent"  
+    	android:layout_height="1dp" 
+    	android:layout_below="@id/newbb_detail_layout"
+    	android:layout_marginTop="6dp"
+   		android:background="?android:attr/listDivider"  
+			/>  
+        <!-- new bb reward -->
+        <RelativeLayout
+        android:id="@+id/newbb_reward_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray"
+        android:layout_below="@id/divider_2"
+		  android:layout_alignLeft="@id/newbb_title_layout"	        
+        
+        android:layout_marginTop="6dp">
+		<ImageView
+            android:id="@+id/newbb_reward_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reward"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/newbb_rewardname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bangbang_reward"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+                        android:layout_marginLeft="5dp"
+            
+			android:layout_toRightOf="@id/newbb_reward_image"
+             >
+        </TextView>
+        <Spinner
+            android:id="@+id/newbb_reward_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newbb_rewardname"
+            android:entries="@array/rewards"
+            android:prompt="@string/reward_tip"
+            tools:listitem="@android:layout/simple_spinner_item" />
+        <EditText
+            android:id="@+id/rewardedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/newbb_reward_spinner"
+            android:layout_below="@id/newbb_rewardname"
+            android:hint="@string/moneyonly"
+            android:inputType="number"
+            android:textSize="15sp"  >
+        </EditText>
+        </RelativeLayout>
+               <View  
+    	android:id="@+id/divider_3"
+   		android:layout_width="fill_parent"  
+    	android:layout_height="1dp" 
+    	android:layout_below="@id/newbb_reward_layout"
+    	android:layout_marginTop="6dp"
+   		android:background="?android:attr/listDivider"  
+			/>  
+		<!-- new bb deadtime -->
+		<RelativeLayout
+        android:id="@+id/newbb_deadtime_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray"
+        android:layout_below="@id/divider_3"
+		  android:layout_alignLeft="@id/newbb_title_layout"	        
+        
+        android:layout_marginTop="6dp">
+		<ImageView
+            android:id="@+id/newbb_deadtime_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/deadtime"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/newbb_deadtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deadtime"
+            android:textColor="@color/black"
+            android:textSize="15sp" 
+			  android:layout_marginLeft="5dp"
+            
+   			android:layout_toRightOf="@id/newbb_deadtime_image"
+            >
+        </TextView>
+        <Button
+            android:id="@+id/deadtimedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newbb_deadtime"
+		></Button>
+        <Button            
+            android:id="@+id/deadtimehr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newbb_deadtime"
+            android:layout_toRightOf="@id/deadtimedate"
+            ></Button>
+        </RelativeLayout>
+       <View  
+    	android:id="@+id/divider_4"
+   		android:layout_width="fill_parent"  
+    	android:layout_height="1dp" 
+    	android:layout_below="@id/newbb_deadtime_layout"
+    	android:layout_marginTop="6dp"
+   		android:background="?android:attr/listDivider"  
+			/>
+        <!-- new bb share to sns 
+		<RelativeLayout
+        android:id="@+id/newbb_sharesns_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray"
+        android:layout_below="@id/divider_4"
+		  android:layout_alignLeft="@id/newbb_title_layout"	        
+        android:layout_marginTop="6dp">
+		<ImageView
+            android:id="@+id/newbb_sharesns_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sharesns"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/newbb_sharesns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/syncsns"
+            android:textColor="@color/black"
+            android:textSize="15sp" 
+            android:layout_marginLeft="5dp"
+ 			android:layout_toRightOf="@id/newbb_sharesns_image"
+            >
+        </TextView>
+        <CheckBox
+            android:id="@+id/sharetoWEIBO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newbb_sharesns_image"
+		></CheckBox>
+       <ImageView
+            android:id="@+id/sharetoWEIBO_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newbb_sharesns_image"
+            android:layout_toRightOf="@id/sharetoWEIBO"
+            android:src="@drawable/ic_com_sina_weibo_logo"
+            
+		></ImageView>
+		</RelativeLayout >
+		<View  
+    	android:id="@+id/divider_5"
+   		android:layout_width="fill_parent"  
+    	android:layout_height="1dp" 
+    	android:layout_below="@id/newbb_sharesns_layout"
+    	android:layout_marginTop="6dp"
+   		android:background="?android:attr/listDivider"  
+			/>-->
+			<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray"
+        android:orientation="horizontal" 
+		android:layout_below="@id/divider_4"
+		android:layout_alignLeft="@id/newbb_title_layout"	
+		android:layout_marginRight="10dp"    
+    	android:layout_marginTop="6dp"
+		    android:gravity="center_vertical"
+		
+        >
+		 <Button
+            android:id="@+id/newbb_clean"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clean" 
+            android:background="@drawable/cancel_background"
+            	android:layout_weight="1"
+            
+            >
+		</Button>
+       	<TextView
+		android:id="@+id/job_list_spaces1"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"  
+		android:gravity="center"
+			android:layout_weight="1"
+		
+		></TextView>	
+		<Button
+            android:id="@+id/newbb_confirm"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:background="@drawable/confirm_background"
+            android:layout_weight="1"
+            
+		>
+		</Button>
+		     </LinearLayout>
+		
+   </RelativeLayout>
+    </ScrollView >
+    
+</LinearLayout>

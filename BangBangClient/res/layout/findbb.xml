@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/background_gray"
+    >
+   	<!-- header -->
+    <!-- <	 include layout="@layout/include_action_bar"/>-->
+
+	<com.bangya.client.widget.PullToRefreshListView
+            android:cacheColorHint="@color/listitem_transparent"
+            android:id="@+id/main_list_view_find"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:listSelector="@drawable/list_item_selector"
+            
+            >
+    </com.bangya.client.widget.PullToRefreshListView>
+
+</LinearLayout>

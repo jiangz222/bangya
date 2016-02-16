@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rewards">
+        <item>人民币(元)</item>
+        <item>物品</item>
+        <item>精神赞美</item>
+        <item>其他</item>
+        <item>无</item>
+    </string-array>
+</resources>
